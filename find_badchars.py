@@ -26,7 +26,6 @@ def transform_badchar_toarray():
 			for index, line_char in enumerate(line):
 
 				if (index  % 4 == 0):
-					#print(' comenzar nuevo')
 					# New char
 					if simple_bad_char != '':
 						# guardar 
@@ -35,8 +34,6 @@ def transform_badchar_toarray():
 					simple_bad_char = ''
 					simple_bad_char += line_char
 				else:
-					#print(' continuar')
-					# Same char
 					simple_bad_char += line_char
 
 		show_array_content(array_all_badchars)
@@ -87,9 +84,6 @@ def main():
 			array_bof_badchars.append(badchar_2)
 			array_bof_badchars.append(badchar_3)
 			array_bof_badchars.append(badchar_4)
-
-	# show_array_content(array_bof_badchars)
-	# pprint(array_bof_badchars)
 	compare_and_generate()
 
 def banner():
